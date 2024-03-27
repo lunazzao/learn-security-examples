@@ -1,2 +1,5 @@
 - Briefly explain the vulnerability and why the secure version prevents the vulnerability.
 - What additional security mechanisms can you incorporate to prevent such attacks?
+
+A vulnerability in software is a flaw or weakness in the system's design, implementation, or configuration that, if exploited, could lead to a security breach. 
+To prevent vulnerabilities, we can ensure that all input is validated and sanitized to prevent injection attacks.

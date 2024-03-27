@@ -1,2 +1,7 @@
 - Briefly explain the vulnerability and why the secure version is better at preventing repudiation than the insecure version.
+
+Lack of Authentication and Authorization: There's no system in place to authenticate users or verify their identities. Anyone can send messages as any user since the user field is freely submitted in the request body.
+
 - What additional security mechanisms can you incorporate to prevent such attacks?
+Secure Logging: Implementing a secure, tamper-evident logging system that records every action along with metadata such as timestamps, user identifiers, and action details. This allows for an audit trail that can be used to trace actions back to specific users.
+Authentication and Authorization: Ensuring users are authenticated and their identities verified before they can perform actions. This could be implemented using session cookies, tokens (e.g., JWT), or other authentication mechanisms.

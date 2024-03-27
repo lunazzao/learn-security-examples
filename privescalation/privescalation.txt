@@ -1,0 +1,16 @@
+
+• Briefly explain the vulnerability and why the secure version prevents the
+vulnerability.
+The code is vulnerable to privilege escalation due to its lack of secure authentication and authorization checks. 
+Specifically, the route '/update-role' allows any user who can submit the correct userId and newRole parameters to change a user's role, 
+potentially to an admin, without verifying the identity or the privileges of the requester. This vulnerability is compounded by the 
+absence of any logging or auditing mechanism, which means users could deny performing such actions, leading to repudiation issues.
+
+
+• What additional security mechanisms can you incorporate to prevent such
+attacks?
+Secure Version Improvement:
+A more secure version would implement robust authentication and authorization checks to ensure that only authorized users (e.g., admins) 
+can update roles. Additionally, it would include detailed logging of all user actions, including attempts to update roles. These logs 
+would capture the user's identity, the action attempted, and the time of the action. This way, even if a user tries to deny their actions, 
+the system has an immutable record that can prove otherwise, thereby preventing repudiation.
