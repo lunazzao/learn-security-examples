@@ -1,1 +1,5 @@
 Briefly explain the vulnerability and why the secure version prevents the vulnerability.
+
+The vulnerability involves SQL Injection, where an attacker can manipulate a site's SQL queries by inputting malicious SQL code into form fields or through URL parameters. This can lead to unauthorized access to the database, allowing attackers to read, modify, or delete data.
+
+The secure version prevents this vulnerability by using prepared statements and parameterized queries. These methods ensure that user input is treated as data, not executable code, effectively neutralizing the malicious SQL. This approach upholds the database's integrity by preventing attackers from executing unauthorized SQL commands.
